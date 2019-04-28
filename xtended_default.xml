@@ -4,15 +4,15 @@
   <remote  name="github"
            fetch="https://github.com" />
 
-  <remote  name="los"
-           fetch="https://github.com/LineageOS" />
-
   <remote  name="xtended"
            fetch="https://github.com/Xtended-Pie"
            revision="xp" />
   
   <remote  name="gzosp"
            fetch="https://github.com/GZOSP" />
+
+  <remote  name="los"
+           fetch="https://github.com/LineageOS" />
 
   <default revision="9.0"
            remote="gzosp"
@@ -36,6 +36,13 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+
+  <project path="hardware/qcom/audio" name="hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="gzosp" />
+  <project path="hardware/qcom/bootctrl" name="hardware_qcom_bootctrl" groups="pdk-qcom" remote="gzosp" />
+  <project path="hardware/qcom/camera" name="hardware_qcom_camera" groups="qcom_camera,pdk-qcom" remote="gzosp" />
+  <project path="hardware/qcom/display" name="hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="gzosp" />
+  <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="gzosp" />
+  <project path="hardware/qcom/media" name="hardware_qcom_media" groups="qcom,pdk-qcom" remote="gzosp" />
 
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
   <project path="bionic" name="bionic" remote="xtended" />
