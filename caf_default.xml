@@ -54,7 +54,7 @@
   <project path="hardware/qcom/power" name="hardware_qcom_power" groups="qcom,pdk" remote="gzosp" revision="9.0" />
 
   <!-- Ril -->
-  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="los" revision="lineage-16.0" />
+  <project path="hardware/ril" name="SuperDroidBond/aosp_hardware_ril" groups="pdk" remote="github" revision="xp" />
   <project path="hardware/ril-caf" name="android_hardware_ril" groups="pdk" remote="los" revision="lineage-16.0-caf" />
 
   <!-- Wlan -->
@@ -73,6 +73,16 @@
 
   <!-- System QCOM Softapp -->
   <project path="system/qcom" name="android_system_qcom" remote="los" revision="lineage-16.0" />
+
+  <!-- NFC -->
+  <project path="vendor/nxp/opensource/interfaces/nfc" name="android_vendor_nxp_interfaces_opensource_nfc" remote="los" revision="lineage-16.0" />
+  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="los" revision="lineage-16.0" />
+  <project path="vendor/nxp/opensource/commonsys/frameworks" name="android_vendor_nxp_opensource_frameworks" remote="los" revision="lineage-16.0" />
+  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="android_vendor_nxp_opensource_packages_apps_Nfc" remote="los" revision="lineage-16.0" />
+  <project path="vendor/nxp/opensource/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="los" revision="lineage-16.0" />
+  <project path="vendor/nxp/opensource/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="los" revision="lineage-16.0" />
+  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" remote="los" revision="lineage-16.0" />
+  <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" groups="pdk" remote="los" revision="lineage-16.0" />
 
 </manifest>
 
