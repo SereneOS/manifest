@@ -7,7 +7,11 @@
   <remote  name="los"
            fetch="https://github.com/LineageOS" />
 
-  <remote  name="xtended"
+  <remote  name="sereneos"
+           fetch="https://github.com/SereneOS"
+           revision="xp" />
+  
+    <remote  name="xtended"
            fetch="https://github.com/Xtended-Pie"
            revision="xp" />
   
@@ -21,9 +25,9 @@
            sync-j="8" />
 
   <!-- GZOSP -->
-  <project path="manifest" name="manifest" remote="xtended" />
+  <project path="manifest" name="manifest" remote="sereneos" />
   <project path="art" name="art" remote="xtended" />
-  <project path="build/make" name="build_make" remote="xtended" >
+  <project path="build/make" name="build_make" remote="sereneos">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -32,7 +36,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong"  remote="xtended" >
+  <project path="build/soong" name="build_soong"  remote="sereneos" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -43,6 +47,9 @@
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="xtended" />
   <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy-legacy" remote="xtended" />
   <project path="device/xtended/sepolicy" name="device_xtended_sepolicy" remote="xtended" />
+  <project path="device/oneplus/dumpling" name="device_oneplus_dumpling" remote="sereneos" />
+  <project path="device/oneplus/msm8998-common" name="device_oneplus_msm8998-common" remote="sereneos" />
+  <project path="kernel/oneplus/msm8998" name="kernel_oneplus_msm8998" remote="sereneos" />
   <project path="external/perfetto" name="external_perfetto" groups="pdk" remote="gzosp" />
   <project path="external/selinux" name="external_selinux" groups="pdk" remote="gzosp" />
   <project path="external/sqlite" name="external_sqlite" groups="pdk" remote="xtended" />
@@ -55,7 +62,7 @@
   <project path="prebuilts/build-tools" name="prebuilts_build-tools" clone-depth="1" remote="xtended" />
   <project path="frameworks/aoscp" name="frameworks_aoscp" groups="pdk" remote="xtended" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="xtended" />
-  <project path="frameworks/base" name="frameworks_base" remote="xtended" />
+  <project path="frameworks/base" name="frameworks_base" remote="sereneos" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="xtended" />
   <project path="frameworks/rs" name="frameworks_rs" groups="pdk" remote="xtended" />
   <project path="frameworks/support" name="frameworks_support" groups="pdk" remote="xtended" />
@@ -74,9 +81,9 @@
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="xtended" /> 
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="xtended" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="los" revision="lineage-16.0" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="xtended" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="sereneos" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="xtended" />
-  <project path="packages/apps/Xtensions" name="msm_xtended_Xtensions" remote="xtended" />
+  <project path="packages/apps/Xtensions" name="msm_xtended_Xtensions" remote="sereneos" />
   <project path="packages/apps/CustomDoze" name="Project-Xtended/packages_apps_CustomDoze" remote="github" revision="xp" />
   <project path="packages/apps/XOta" name="packages_apps_XOta" remote="xtended" />
   <project path="packages/services/BuiltInPrintService" name="packages_services_BuiltInPrintService" remote="gzosp" />
@@ -88,16 +95,14 @@
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="xtended" />
   <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" remote="xtended" />
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="xtended" />
-  <project path="packages/apps/Snap" name="packages_apps_Snap" remote="xtended" />
   <project path="system/bt" name="system_bt" remote="xtended" />
   <project path="system/core" name="system_core" groups="pdk" remote="xtended" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="xtended" />
-  <project path="vendor/xtended" name="vendor_xtended" remote="xtended" />
+  <project path="vendor/xtended" name="vendor_xtended" remote="sereneos" />
+  <project path="vendor/oneplus" name="proprietary_vendor_oneplus-5" remote="sereneos" />
   <project path="packages/apps/DevicesOTA" name="vendor_xtended_DevicesOTA" remote="xtended" />
   <project path="packages/apps/SmartNav" name="packages_apps_SmartNav" remote="xtended" />
   <project path="packages/apps/SmartNavSettings" name="packages_apps_SmartNavSettings" remote="xtended" />
-  <project path="packages/apps/MusicFX" name="packages_apps_MusicFX" remote="xtended" />
-  <project path="packages/apps/Eleven" name="packages_apps_Eleven" remote="xtended" />
   <project path="frameworks/opt/jamesdsp" name="frameworks_opt_jamesdsp" remote="xtended" />
   <project path="packages/apps/Recorder" name="packages_apps_Recorder" remote="xtended" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="xtended" />
