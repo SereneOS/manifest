@@ -1,14 +1,12 @@
-Project-Xtended:
+Personal build for OnePlus 5T which I call as "SereneOS" forked from amazng "Project-Xtended" project.
 
-A ROM Based on AOSP, with features from almost all Custom ROMs available. 
-
-We Thank all those Devs & Team from whom we have kanged committs.
+Thank all the devs of Xtended and those devs & teams from whom kanged have been committed.
 
 # ======== # ======== # ======== # ======== #
 
 To initialize your local repository, use this command:
 
-    repo init -u https://github.com/Xtended-Pie/manifest.git -b xp
+    repo init -u https://github.com/SereneOS/manifest -b xp
 
 To sync the repository, use this command:
 
@@ -17,16 +15,5 @@ To sync the repository, use this command:
 To Build, use following commands:
 
 1) . build/envsetup.sh
-2) lunch xtended_device-userdebug
-3) make xtended
-
-Change device with your device code name. Ex.- oneplus3, dumpling, etc.
-	
-# ======== # ======== # ======== # ======== #
-
-XDA Thread Title:
-
-     [STABLE] MSM Xtended XP# Release v# [Pie|Android 9.0] [Month Date, 2018]
-
-
-
+2) lunch xtended_dumpling-userdebug
+3) make -j4 xtended
