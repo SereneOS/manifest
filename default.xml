@@ -579,8 +579,8 @@
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
-  <!-- GZOSP manifest -->
-  <include name="xtended_default.xml" />
+  <!-- SereneOS manifest -->
+  <include name="sereneos_default.xml" />
 
   <!-- CAF manifest -->
   <include name="caf_default.xml" />
